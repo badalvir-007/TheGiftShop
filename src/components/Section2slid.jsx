@@ -31,7 +31,7 @@ const imagesData = [
 
 const SlideShow2 = () => {
   return (
-    <div className="flex mb-4">
+    <div className="flex mb-4 cursor-pointer">
       {imagesData.map((image) => (
         <div key={image.id} className="mx-2">
           <div className="polaroid">

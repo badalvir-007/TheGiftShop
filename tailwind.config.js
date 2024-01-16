@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'public-sans': ['Public Sans', 'sans-serif'],
+      },
       maxWidth: {
         maxContent: "1260px",
         maxContentTab: "650px"

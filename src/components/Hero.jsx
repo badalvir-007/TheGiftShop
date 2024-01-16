@@ -9,7 +9,7 @@ import sildeimg7 from '../assets/sildeimages/sildeimage7.webp';
 
 
 import gifticon from '../assets/section2 images/unique_gifts_igp_d_title.svg';
-const Slideshow = () => {
+const Hero = () => {
   const images = [sildeimg, sildeimg2, sildeimg3, sildeimg4, sildeimg5, sildeimg6, sildeimg7];
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -30,10 +30,10 @@ const Slideshow = () => {
   return (
    <div className='w-11/12'>
     {/* {section 1 silde show} */}
-    <div className="relative mt-4">
+    <div className="relative mt-4 cursor-pointer">
       <img src={images[currentImage]} alt={`Slide ${currentImage + 1}`} className="w-full h-auto" />
 
-      <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+      <div className="absolute  bottom-4 left-0 right-0 flex justify-center ">
         {images.map((_, index) => (
           <button
             key={index}
@@ -66,4 +66,4 @@ const Slideshow = () => {
   );
 };
 
-export default Slideshow;
+export default Hero;

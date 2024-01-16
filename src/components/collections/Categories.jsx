@@ -111,13 +111,16 @@ const Categories = () => {
       </div>
 
       <div className="flex flex-col">
-        <div className="flex space-x-4 ">
+        <div className="w-1440px h-502px flex space-x-4">
           {cardOfTwo.map((card, index) => (
-            <div key={index} className="flex flex-row border-solid border-2 border-indigo-600 space-x-4">
+            <div
+              key={index}
+              className="flex flex-row border-solid border-2 border-indigo-600 space-x-4 p-1 border-gray-300 rounded-md"
+            >
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-auto"
+                className="w-434px h-218px object-cover rounded-md"
               />
               <div className="flex flex-col">
                 <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
@@ -131,15 +134,18 @@ const Categories = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-4 mt-3">
+        <div className="w-1440px h-502px grid grid-cols-3 gap-4 mt-3">
           {cardOfSix.map((card, index) => (
-            <div key={index} className="flex flex-row border-solid border-2 border-indigo-600 space-x-4">
-              <div className="w-[412px] h=[160px] ">
-              <img
-                src={card.image}
-                alt={card.title}
-                className="w-full h-auto"
-              />
+            <div
+              key={index}
+              className="flex flex-row border-solid border-2 border-indigo-600 space-x-4 p-1 border-gray-300 rounded-md"
+            >
+              <div className="w-438px h-234px">
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className="w-full h-full object-cover rounded-md"
+                />
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
