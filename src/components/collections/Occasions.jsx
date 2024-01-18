@@ -6,6 +6,7 @@ import housewarming from "../../assets/Occasionsimgs/occasions4.webp";
 import anniversary from "../../assets/Occasionsimgs/occasions5.webp";
 import bestWishes from "../../assets/Occasionsimgs/occasions6.jpg";
 import ImageTagSection from "../reuseablecode/Imagesection";
+import TextSection from "../reuseablecode/TextSection";
 
 const Occasions = () => {
   const imageTagData = [
@@ -21,11 +22,12 @@ const Occasions = () => {
   ];
   return (
     <div className="w-11/12 flex flex-col justify-center mt-4 ml-4 ">
-      <div className="flex flex-col">
-        {/* {heading and subheading} */}
-        <h1 className="text-2xl ">Occasions</h1>
-        <p>Celebrate each occasion with a gift that has a lasting imperssion</p>
-      </div>
+      <TextSection
+        title="Occasions"
+        description="Celebrate each occasion with a gift that has a lasting imperssion"
+        />
+      
+     
       <div className="flex flex-row">
         {/* {images} */}
         <div className="grid grid-cols-3 gap-6">
@@ -40,7 +42,7 @@ const Occasions = () => {
         ))}
       </div>
         {/* {explore more } */}
-        <div className="w-12 h-[calc(33.83vw + 16px)] ml-auto relative flex flex-col items-center justify-between">
+        <div className="w-12 ml-10 h-[calc(33.83vw + 16px)] ml-auto relative flex flex-col items-center justify-between">
           <div className="border-t h-[calc(33.83vw + 16px)]"></div>
           <div className="text-center text-4xl">Explore More</div>
           <div className="border-t h-[calc(50% - 69px)]  bg-gradient-to-b from-lineToblue to-rgba-203-213-225-0"></div>

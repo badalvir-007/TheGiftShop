@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect,useState } from 'react';
 import gI1 from '../assets/section2 images/sec2slide/secimg1.jpg';
 import gI2 from '../assets/section2 images/sec2slide/secimg2.webp';
 import gI3 from '../assets/section2 images/sec2slide/secimg3.webp';
@@ -29,13 +30,50 @@ const imagesData = [
   { id: 13, imageUrl: gI13, title: 'World' },
 ];
 
+
 const SlideShow2 = () => {
+  const [cursorX, setCursorX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+
+  useEffect(() => {
+    const handleMouseDown = () => {
+      setIsDragging(true);
+    };
+
+    const handleMouseMove = (event) => {
+      if (isDragging) {
+        setCursorX(event.clientX);
+      }
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    document.addEventListener('mousedown', handleMouseDown);
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousedown', handleMouseDown);
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging]);
+
   return (
-    <div className="flex mb-4 cursor-pointer">
-      {imagesData.map((image) => (
-        <div key={image.id} className="mx-2">
+    <div className="flex mb-4 max-w-screen-xl h-180 overflow-hidden relative">
+      {imagesData.map((image, index) => (
+        <div
+          key={image.id}
+          style={{
+            transform: `translateX(${isDragging ? (index * 180) - cursorX / 10 : 0}px)`, // Adjust the division factor for speed
+            cursor: isDragging ? 'grabbing' : 'grab',
+          }}
+          className="mx-2 transition-transform duration-500"
+        >
           <div className="polaroid">
-            <img src={image.imageUrl} alt={image.title} className="w-200 h-200" />
+            <img src={image.imageUrl} alt={image.title} className="object-cover w-180 h-180" />
             <h3 className="text-black text-lg mt-2">{image.title}</h3>
           </div>
         </div>

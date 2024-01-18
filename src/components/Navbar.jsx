@@ -15,15 +15,15 @@ const Navbar = () => {
 
           {/* Search bar in the middle */}
           <div className="flex items-center w-[534px] h-[36px] border-slate-400 rounded-2xl">
-  <input
-    type="text"
-    placeholder="Search For Gifts"
-    className="flex-grow pl-2 pr-10 text-slate-900 placeholder-slate-500 bg-transparent border-none focus:outline-none"
-  />
-  <div className="relative right-2">
-    <CiSearch className="text-slate-500" />
-  </div>
-</div>
+            <input
+              type="text"
+              placeholder="Search For Gifts"
+              className="flex-grow pl-2 pr-10 text-slate-900  placeholder-slate-500 bg-transparent border-none focus:outline-none"
+            />
+            <div className="relative right-2">
+              <CiSearch className="text-slate-500" />
+            </div>
+          </div>
           {/* Icons in the top left corner */}
           <div className="flex  space-x-4 items-center">
             <FaHome className="mr-2" />

@@ -12,15 +12,17 @@ import personalisedA from "../../assets/celebreateimgs/anniversaryimgs/anniversa
 import WifeA from "../../assets/celebreateimgs/anniversaryimgs/anniversary4.webp";
 import couplesA from "../../assets/celebreateimgs/anniversaryimgs/anniversary5.webp";
 import cakesA from "../../assets/celebreateimgs/anniversaryimgs/anniversary6.webp";
+import TextSection from "../reuseablecode/TextSection";
 
 const Celebrate = () => {
   return (
     <div>
       <div className="mt-12 mb-6  ">
-        <div>
-          <h1>Celebrate Milestones</h1>
-          <p>With our memorable gifts</p>
-        </div>
+        <TextSection
+        title="Celebrate Milestones"
+        description="With our memorable gifts"
+        />
+        
         <div className="mt-4 flex flex-row">
           {/* {birthays gifts } */}
           <div className="flex flex-col w-[50%] h-[550px] space-x-2">

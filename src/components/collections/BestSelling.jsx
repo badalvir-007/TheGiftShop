@@ -1,33 +1,34 @@
-import React, { useState } from 'react';
-import { FaRupeeSign } from 'react-icons/fa';
+import React, { useState } from "react";
+import { FaRupeeSign } from "react-icons/fa";
 import { GoChevronLeft, GoChevronRight } from "react-icons/go";
-import cakeimg from '../../assets/bestselimgs/bestselling1.webp';
-import flowersimg from '../../assets/bestselimgs/bestselling1.webp';
-import moonimg from '../../assets/bestselimgs/bestselling1.webp';
-import cupimg from '../../assets/bestselimgs/bestselling1.webp';
-import initialimg from '../../assets/bestselimgs/bestselling1.webp';
-import rosyimg from '../../assets/bestselimgs/bestselling1.webp';
-import notesimg from '../../assets/bestselimgs/bestselling1.webp';
-import frameimg from '../../assets/bestselimgs/bestselling1.webp';
+import cakeimg from "../../assets/bestselimgs/bestselling1.webp";
+import flowersimg from "../../assets/bestselimgs/bestselling2.jpg";
+import moonimg from "../../assets/bestselimgs/bestselling3.webp";
+import cupimg from "../../assets/bestselimgs/bestselling4.webp";
+import initialimg from "../../assets/bestselimgs/bestselling5.jpg";
+import rosyimg from "../../assets/bestselimgs/bestselling6.webp";
+import notesimg from "../../assets/bestselimgs/bestselling7.webp";
+import frameimg from "../../assets/bestselimgs/bestselling8.webp";
+import TextSection from "../reuseablecode/TextSection";
 
 const Card = ({ imageUrl, title, price, rating }) => {
   return (
-    <div className="border p-4 m-4">
-      <div className="w-full h-2/3">
-        <img src={imageUrl} alt="Gift" className="w-full h-full object-cover rounded-t-lg" />
-        <div className="p-4 border-t border-gray-300">
-          <h1 className="text-lg font-semibold">{title}</h1>
-          {/* Additional content goes here */}
-        </div>
+    <div className="border rounded-xl p-4 m-4">
+      <div className="w-full h-2/3 flex flex-col">
+        <img
+          src={imageUrl}
+          alt="Gift"
+          className="w-full h-full object-cover rounded-t-lg"
+        />
+        <h1 className="text-lg font-semibold mt-2  text-gray-500">{title}</h1>
       </div>
-      <div className="flex items-center mt-2">
+      <div className="flex items-center mt-8">
         <div>
           <FaRupeeSign />
         </div>
-        <p className="ml-2">{price}</p>
+        <p className="ml-2 ">{price}</p>
       </div>
-      <div className="mt-2">
-        {/* You can add additional content or styling for the rating */}
+      <div className="mt-4">
         <p>{rating}</p>
       </div>
     </div>
@@ -84,35 +85,37 @@ const BestSelling = () => {
       price: "645",
       rating: "3.5 stars",
     },
-  
+
     // Add more card data as needed
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 4 + cards.length) % cards.length
+    );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
+    setCurrentIndex((prevIndex) => (prevIndex + 4) % cards.length);
   };
 
   return (
     <div className="mt-[140px] relative">
-      <div className="flex flex-col">
-        <h1 className="text-3xl">Best Selling Gifts</h1>
-        <p className="text-sm">Packed with love</p>
-      </div>
+      <TextSection title="Best Selling Gifts" description="Packed with love" />
 
-      <div className="relative w-363px h-466px mx-auto mt-4 overflow-hidden border rounded-lg">
+      <div className="relative w-363px h-466px mx-auto mt-4 overflow-hidden border rounded-lg ">
         <button
-          className="absolute left-0 top-1/2  transform -translate-y-1/2"
+          className="absolute left-4 top-1/2  transform  -translate-y-1/2"
           onClick={handlePrev}
         >
           <GoChevronLeft className="text-3xl text-gray-700" />
         </button>
 
-        <div className="flex transition-transform ease-in-out duration-300 transform" style={{ transform: `translateX(-${currentIndex * 25}%)` }}>
+        <div
+          className="flex transition-transform ml-8 ease-in-out duration-300 transform"
+          style={{ transform: `translateX(-${currentIndex * 25}%)` }}
+        >
           {cards.slice(currentIndex, currentIndex + 4).map((card, index) => (
             <Card key={index} {...card} />
           ))}
@@ -130,4 +133,3 @@ const BestSelling = () => {
 };
 
 export default BestSelling;
-

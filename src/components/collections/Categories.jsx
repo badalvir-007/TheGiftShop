@@ -7,6 +7,7 @@ import plants from "../../assets/Catgoriesimgs/catgories5.webp";
 import homeliving from "../../assets/Catgoriesimgs/catgories6.webp";
 import jewellery from "../../assets/Catgoriesimgs/catgories7.webp";
 import fashion from "../../assets/Catgoriesimgs/catgories8.jpg";
+import TextSection from "../reuseablecode/TextSection";
 
 const cardOfTwo = [
   {
@@ -105,17 +106,17 @@ const cardOfSix = [
 const Categories = () => {
   return (
     <div className="flex flex-col justify-between p-4">
-      <div className="flex flex-col">
-        <h1 className="text-3xl">Categories</h1>
-        <p>Wide range of gifts for your celebration</p>
-      </div>
+      <TextSection 
+      title="Categories"
+      description="Wide range of gifts for your celebration"
+      />
 
-      <div className="flex flex-col">
-        <div className="w-1440px h-502px flex space-x-4">
+      <div className="flex flex-col w-1440px h-502px">
+        <div className=" flex space-x-4">
           {cardOfTwo.map((card, index) => (
             <div
               key={index}
-              className="flex flex-row border-solid border-2 border-indigo-600 space-x-4 p-1 border-gray-300 rounded-md"
+              className="flex flex-row border-solid border-2  space-x-4 p-1 border-gray-300 rounded-md"
             >
               <img
                 src={card.image}
@@ -138,7 +139,7 @@ const Categories = () => {
           {cardOfSix.map((card, index) => (
             <div
               key={index}
-              className="flex flex-row border-solid border-2 border-indigo-600 space-x-4 p-1 border-gray-300 rounded-md"
+              className="flex flex-row border-solid border-2  space-x-4 p-1 border-gray-300 rounded-md"
             >
               <div className="w-438px h-234px">
                 <img
