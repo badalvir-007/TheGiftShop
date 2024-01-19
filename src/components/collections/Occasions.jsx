@@ -21,14 +21,15 @@ const Occasions = () => {
     // Add more data as needed
   ];
   return (
-    <div className="w-11/12 flex flex-col justify-center mt-4 ml-4 ">
+   <div className="w-11/12 max-w-maxContent flex justify-center items-center mx-auto ">
+     <div className="w-11/12 flex flex-col justify-center mt-4 ml-4 ">
       <TextSection
         title="Occasions"
         description="Celebrate each occasion with a gift that has a lasting imperssion"
         />
       
      
-      <div className="flex flex-row">
+      <div className="flex flex-row mt-7">
         {/* {images} */}
         <div className="grid grid-cols-3 gap-6">
         {imageTagData.map((data, index) => (
@@ -49,6 +50,7 @@ const Occasions = () => {
         </div>
       </div>
     </div>
+   </div>
   );
 };
 

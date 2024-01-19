@@ -31,7 +31,8 @@ const Worldgifts = () => {
   ];
 
   return (
-    <div className="mt-12 mr-4">
+    <div className="w-11/12 flex justify-center items-center mx-auto">
+      <div className="mt-12 mr-4">
       <div>
         <h1 className="text-4xl">Send Gifts Worldwide</h1>
         <p>A gift to every part of the world</p>
@@ -56,6 +57,7 @@ const Worldgifts = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

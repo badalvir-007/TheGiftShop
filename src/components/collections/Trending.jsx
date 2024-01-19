@@ -20,7 +20,7 @@ const Trending = () => {
     image5,
       ];
   return (
-    <div className="w-11/12">
+    <div className="w-11/12 flex justify-center items-center mx-auto">
       <div className="text-2xl mt-[60px]">
         <TextSection
         title="Trending Gifts"

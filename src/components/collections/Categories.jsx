@@ -105,7 +105,8 @@ const cardOfSix = [
 
 const Categories = () => {
   return (
-    <div className="flex flex-col justify-between p-4">
+    <div className="w-11/12 flex justify-center items-center mx-auto">
+      <div className=" flex flex-col justify-between p-4">
       <TextSection 
       title="Categories"
       description="Wide range of gifts for your celebration"
@@ -160,6 +161,7 @@ const Categories = () => {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -67,7 +67,8 @@ const CustomerStoriesSlider = () => {
   };
 
   return (
-    <div className="mt-8 ">
+    <div className="w-11/12 max-w-maxContent flex justify-center items-center mx-auto ">
+      <div className="mt-8 ">
       <div className="flex flex-col items-start justify-between">
         <h1 className="text-3xl font-bold">Customer Stories</h1>
         <p className="text-gray-600">Rated 4.8 / 5 based on 278161 ratings</p>
@@ -101,6 +102,7 @@ const CustomerStoriesSlider = () => {
           <FaChevronRight className="text-2xl text-gray-500" />
         </button>
       </div>
+    </div>
     </div>
   );
 };

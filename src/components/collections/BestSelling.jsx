@@ -101,7 +101,7 @@ const BestSelling = () => {
   };
 
   return (
-    <div className="mt-[140px] relative">
+    <div className="w-11/12  justify-center items-center mx-auto mt-[150px]">
       <TextSection title="Best Selling Gifts" description="Packed with love" />
 
       <div className="relative w-363px h-466px mx-auto mt-4 overflow-hidden border rounded-lg ">
