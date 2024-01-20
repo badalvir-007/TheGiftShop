@@ -42,9 +42,9 @@ const Worldgifts = () => {
         {countries.map((element, index) => (
           <div
             key={index}
-            className="w-270 h-202 relative border-cyan-200 bg-gray-100 rounded-lg"
+            className="w-210 h-180 relative border-cyan-200 bg-gray-100 rounded-lg"
           >
-            <div className="w-[17.57vw] h-[13.177vw] flex flex-col justify-start items-center p-4 border rounded-lg bg-blue-100 mt-4">
+            <div className="w-[15.57vw] h-[13.177vw] flex flex-col justify-start items-center p-4 border rounded-lg bg-blue-100 mt-4">
               <img
                 className="w-full h-[8.25vw] object-cover rounded-lg"
                 src={element.image}

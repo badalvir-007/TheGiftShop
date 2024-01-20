@@ -13,14 +13,20 @@ import WifeA from "../../assets/celebreateimgs/anniversaryimgs/anniversary4.webp
 import couplesA from "../../assets/celebreateimgs/anniversaryimgs/anniversary5.webp";
 import cakesA from "../../assets/celebreateimgs/anniversaryimgs/anniversary6.webp";
 import TextSection from "../reuseablecode/TextSection";
+import { Fade } from "react-reveal";
+
 
 
 const ImageWithText = ({ src, alt, text }) => {
   return (
+    <Fade bottom>
     <div className="relative  mb-4 border  space-y-4">
       <img src={src} alt={alt} className="w-full" />
-      <p className="absolute bottom-0 left-0 right-0 text-center bg-transparent text-black p-2">{text}</p>
+      <p className="absolute bottom-0 left-0 right-0 text-center bg-transparent text-black p-2">
+        {text}
+      </p>
     </div>
+  </Fade>
   );
 };
 

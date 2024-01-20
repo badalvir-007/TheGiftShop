@@ -1,16 +1,14 @@
 // ImageTagSection.js
 
-import React from 'react';
+import React from "react";
 
-const ImageTagSection = ({ imageSrc, altText, tagText, height }) => {
+const ImageTagSection = ({ imageSrc, altText, tagText, height, width }) => {
   return (
-    <div className="relative w-[385px] h-[height] border-cyan-200">
-      <img
-        className="w-full h-full object-cover rounded-lg"
-        src={imageSrc}
-        alt={altText}
-      />
-      <p className="text-sm text-center text-black p-2">{tagText}</p>
+    <div className="relative w-384 h-352 border border-gray-300 rounded-2xl overflow-hidden mb-2">
+      <img src={imageSrc} alt={altText} style={{ height, width }} />
+      <div className="absolute bottom-0 left-0 right-0 bg-white text-center py-2" style={{ height: '40px' }}>
+        {tagText}
+      </div>
     </div>
   );
 };

@@ -112,7 +112,7 @@ const Categories = () => {
       description="Wide range of gifts for your celebration"
       />
 
-      <div className="flex flex-col w-1440px h-502px">
+      <div className="flex flex-col w-1440px h-502px mt-8">
         <div className=" flex space-x-4">
           {cardOfTwo.map((card, index) => (
             <div

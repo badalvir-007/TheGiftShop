@@ -66,10 +66,7 @@ const SlideShow2 = () => {
       {imagesData.map((image, index) => (
         <div
           key={image.id}
-          style={{
-            transform: `translateX(${isDragging ? (index * 180) - cursorX / 10 : 0}px)`, // Adjust the division factor for speed
-            cursor: isDragging ? 'grabbing' : 'grab',
-          }}
+          
           className="mx-2 transition-transform duration-500"
         >
           <div className="polaroid">
