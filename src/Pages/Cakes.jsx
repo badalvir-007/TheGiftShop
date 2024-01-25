@@ -1,8 +1,12 @@
 import React from 'react'
+import Categories from '../components/collections/Categories'
 
 const Cakes = () => {
   return (
-    <div>Cakes</div>
+    <div>
+        <div className='flex text-6xl  justify-center py-10'>Cakes</div>
+        <Categories />
+    </div>
   )
 }
 

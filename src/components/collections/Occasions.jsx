@@ -11,6 +11,12 @@ import TextSection from "../reuseablecode/TextSection";
 const Occasions = () => {
   const imageTagData = [
     { src: birthday, alt: "Birthday", tag: "Birthday", height: "350px" },
+    {
+      src: babyShower,
+      alt: "Baby Shower",
+      tag: "Baby Shower",
+      height: "350px",
+    },
     { src: wedding, alt: "Wedding", tag: "Wedding", height: "350px" },
     {
       src: anniversary,
@@ -18,18 +24,13 @@ const Occasions = () => {
       tag: "Anniversary",
       height: "350px",
     },
-    {
-      src: babyShower,
-      alt: "Baby Shower",
-      tag: "Baby Shower",
-      height: "216px",
-    },
+    
 
     {
       src: housewarming,
       alt: "House Warming",
       tag: "House Warming",
-      height: "216px",
+      height: "350px",
     },
 
     {
@@ -61,6 +62,7 @@ const Occasions = () => {
               />
             ))}
           </div>
+
           {/* {explore more } */}
           <div className="ml-4 relative flex flex-col items-center justify-between">
             <div className="border-l h-full"></div>

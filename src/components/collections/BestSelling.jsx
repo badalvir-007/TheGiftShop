@@ -88,21 +88,21 @@ const BestSelling = () => {
 
     // Add more card data as needed
   ];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
 
   // const handlePrev = () => {
   //   setCurrentIndex(
   //     (prevIndex) => (prevIndex - 4 + cards.length) % cards.length
   //   );
   // };
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
-  };
+  // const handlePrev = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
+  // };
   
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 4) % cards.length);
-  };
+  // const handleNext = () => {
+  //   setCurrentIndex((prevIndex) => (prevIndex + 4) % cards.length);
+  // };
 
   return (
     <div className="w-11/12  justify-center items-center mx-auto mt-[150px]">
@@ -110,17 +110,17 @@ const BestSelling = () => {
       <div className="relative w-363px h-466px mx-auto mt-4 overflow-hidden border rounded-lg ">
   <button
     className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10"
-    onClick={handlePrev}
+    
   >
     <GoChevronLeft className="text-4xl text-gray-700" />
   </button>
 
   <div
   className="flex transition-transform ml-8 ease-in-out duration-300 transform"
-  style={{ transform: `translateX(-${(currentIndex % cards.length) * 25}%)` }}
+  
 >
   {Array.from({ length: 2 }, (_, i) => i * cards.length).map((offset) => (
-    cards.slice(currentIndex + offset, currentIndex + offset + 4).map((card, index) => (
+    cards.slice( offset,   offset + 4).map((card, index) => (
       <Card key={index} {...card} />
     ))
   ))}
@@ -129,7 +129,7 @@ const BestSelling = () => {
 
   <button
     className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
-    onClick={handleNext}
+   
   >
     <GoChevronRight className="text-3xl text-gray-700" />
   </button>
