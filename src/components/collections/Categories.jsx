@@ -23,13 +23,13 @@ const cardOfTwo = [
   },
   {
     image: cakes,
-    title: "Category 2",
+    title: "Cakes",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
 ];
@@ -37,76 +37,76 @@ const cardOfTwo = [
 const cardOfSix = [
   {
     image: flowers,
-    title: "Category 3",
+    title: "Flowers",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
   {
     image: gourmet,
-    title: "Category 4",
+    title: "Gourmet",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
   {
     image: plants,
-    title: "Category 5",
+    title: "Plants",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
   {
     image: homeliving,
-    title: "Category 6",
+    title: "Home & Living",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
   {
     image: jewellery,
-    title: "Category 7",
+    title: "Jewellery",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
   {
     image: fashion,
-    title: "Category 8",
+    title: "Fashion",
     choices: [
-      "Subcategory 1",
-      "Subcategory 2",
-      "Subcategory 3",
-      "Subcategory 4",
-      "Subcategory 5",
+      "Home & Living",
+      "Collectables",
+      "Cushsions",
+      "Carucitures",
+      "Mugs",
     ],
   },
 ];
 
 const Categories = () => {
   return (
-    <div className="w-11/12 flex justify-center items-center mx-auto">
-      <div className=" flex flex-col justify-between p-4">
+    <div className="w-11/12 flex justify-center items-center mx-auto ">
+      <div className=" flex flex-col justify-between p-4 cursor-pointer ">
       <TextSection 
       title="Categories"
       description="Wide range of gifts for your celebration"
@@ -122,11 +122,11 @@ const Categories = () => {
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-434px h-218px object-cover rounded-md"
+                className="w-434px h-218px object-cover rounded-md "
               />
               <div className="flex flex-col">
                 <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
-                <ul>
+                <ul className="text-sm  text-gray-400">
                   {card.choices.map((choice, choiceIndex) => (
                     <li key={choiceIndex}>{choice}</li>
                   ))}
@@ -151,7 +151,7 @@ const Categories = () => {
               </div>
               <div className="flex flex-col">
                 <h1 className="text-lg font-semibold mt-2">{card.title}</h1>
-                <ul>
+                <ul className="text-sm  text-gray-400">
                   {card.choices.map((choice, choiceIndex) => (
                     <li key={choiceIndex}>{choice}</li>
                   ))}

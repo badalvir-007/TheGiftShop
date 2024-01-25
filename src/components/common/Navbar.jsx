@@ -1,7 +1,8 @@
 // Navbar.js
 import { FaHome, FaHeart, FaUser, FaShoppingCart } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
-import Logo from "../assets/Logos/logo.jpeg";
+import Logo from "../../assets/Logos/logo.jpeg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -10,7 +11,9 @@ const Navbar = () => {
         <div className="flex flex-row items-center justify-between cursor-pointer">
           {/* Logo in the top left */}
           <div className="w-12 h-8">
-            <img src={Logo} alt="" />
+            <Link to="/">
+              <img src={Logo} alt="" />
+            </Link>
           </div>
 
           {/* Search bar in the middle */}

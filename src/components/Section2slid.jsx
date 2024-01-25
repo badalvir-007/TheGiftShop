@@ -1,5 +1,6 @@
 import React from 'react';
-import { useEffect,useState } from 'react';
+import { Fade } from 'react-reveal';
+import { useEffect, useState } from 'react';
 import gI1 from '../assets/section2 images/sec2slide/secimg1.jpg';
 import gI2 from '../assets/section2 images/sec2slide/secimg2.webp';
 import gI3 from '../assets/section2 images/sec2slide/secimg3.webp';
@@ -30,49 +31,34 @@ const imagesData = [
   { id: 13, imageUrl: gI13, title: 'World' },
 ];
 
-
 const SlideShow2 = () => {
   const [cursorX, setCursorX] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-
   useEffect(() => {
-    const handleMouseDown = () => {
-      setIsDragging(true);
-    };
-
     const handleMouseMove = (event) => {
-      if (isDragging) {
-        setCursorX(event.clientX);
-      }
+      setCursorX(event.clientX);
     };
 
-    const handleMouseUp = () => {
-      setIsDragging(false);
-    };
-
-    document.addEventListener('mousedown', handleMouseDown);
     document.addEventListener('mousemove', handleMouseMove);
-    document.addEventListener('mouseup', handleMouseUp);
 
     return () => {
-      document.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mousemove', handleMouseMove);
-      document.removeEventListener('mouseup', handleMouseUp);
     };
-  }, [isDragging]);
+  }, []);
+
+  
+
+    
 
   return (
     <div className="flex mb-4 max-w-screen-xl h-180 overflow-hidden relative">
       {imagesData.map((image, index) => (
-        <div
-          key={image.id}
-          
-          className="mx-2 transition-transform duration-500"
-        >
-          <div className="polaroid">
-            <img src={image.imageUrl} alt={image.title} className="object-cover w-180 h-180" />
-            <h3 className="text-black text-lg mt-2">{image.title}</h3>
-          </div>
+        <div key={image.id} className="mx-2 transition-transform duration-500">
+          <Fade left={cursorX < window.innerWidth / 2} right={cursorX >= window.innerWidth / 2}>
+            <div className="polaroid">
+              <img src={image.imageUrl} alt={image.title} className="object-cover w-180 h-180" />
+              <h3 className="text-black text-lg mt-2">{image.title}</h3>
+            </div>
+          </Fade>
         </div>
       ))}
     </div>

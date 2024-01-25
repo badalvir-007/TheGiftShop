@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight,FaQuoteRight,FaStar,FaQuoteLeft  } from 'react-icons/fa';
 import cake from '../../assets/Catgoriesimgs/catgories1.jpg';
+
 const stories = [
   {
     id: 1,

@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/common/Navbar';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import SlideShow2 from '../components/Section2slid';
 import Collection from '../components/Collection';
-import Footer from '../components/Footer';
+import Footer from '../components/common/Footer';
 
 
 const Home = () => {
