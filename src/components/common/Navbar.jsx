@@ -4,9 +4,10 @@ import { CiSearch } from "react-icons/ci";
 import Logo from "../../assets/Logos/logo.jpeg";
 import { Link } from "react-router-dom";
 
+
 const Navbar = () => {
   return (
-    <div className="w-11/12">
+    <div className="w-11/12 items-center px-8">
       <nav className="bg-white p-4 space-x-4 border-b border-gray-300">
         <div className="flex flex-row items-center justify-between cursor-pointer">
           {/* Logo in the top left */}
@@ -36,6 +37,7 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
+      
     </div>
   );
 };
